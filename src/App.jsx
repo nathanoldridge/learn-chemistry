@@ -1,7 +1,6 @@
 import React from "react";
 import QuestionItem from "./components/QuestionItem.jsx";
 
-
 function App() {
 
   const questionText = "What is the atomic number of lithium?";

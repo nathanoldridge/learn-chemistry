@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './CorrectAnswerOption.css';
 
-export default class CorrectAnswerOption extends Component {
-    render() {
-
-        return(
+const CorrectAnswerOption = (props) => {
+    return(
           <div className="correct-answer-container">
-             <p>{this.props.c}</p>
+             <p>{props.c}</p>
           </div>
         );
-      }
+
 }
+
+export default CorrectAnswerOption;
