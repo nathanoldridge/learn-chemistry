@@ -1,5 +1,6 @@
 import React from "react";
 import QuestionItem from "./components/QuestionItem.jsx";
+import NewQuestion from "./components/NewQuestion/NewQuestion.jsx";
 
 function App() {
 
@@ -22,6 +23,9 @@ function App() {
       w2={wrongAnswers[1]}
       w3={wrongAnswers[2]}
     ></QuestionItem>
+    <hr />
+    <h3>ADD YOUR OWN QUESTION</h3>
+    <NewQuestion />
   </>
   );
 };
