@@ -1,24 +1,19 @@
 import React, { Component } from 'react';
 import './QuestionItem.css';
+import './CorrectAnswerOption.jsx';
+import CorrectAnswerOption from './CorrectAnswerOption.jsx';
+import WrongAnswerOption from './WrongAnswerOption.jsx';
 
 export default class QuestionItem extends Component {
     render() {
 
-        const questionText = "What is the atomic number of lithium?";
-        const correctAnswer = 7;
-        const wrongAnswers = [
-            Math.floor(Math.random() * 10)+10,
-            Math.floor(Math.random() * 10)+10,
-            Math.floor(Math.random() * 10)+10
-        ];
-
         return(
           <div className="question-container">
-             <h2>{questionText}</h2>
-             <p>a) { wrongAnswers[0] }</p>
-             <p>b) { correctAnswer }</p>
-             <p>c) { wrongAnswers[1] }</p>
-             <p>d) { wrongAnswers[2] }</p>
+             <h2>{ this.props.q }</h2>
+             <WrongAnswerOption w={this.props.w1}></WrongAnswerOption>
+             <CorrectAnswerOption c={this.props.c}></CorrectAnswerOption>
+             <WrongAnswerOption w={this.props.w2}></WrongAnswerOption>
+             <WrongAnswerOption w={this.props.w3}></WrongAnswerOption>
           </div>
         );
       }
