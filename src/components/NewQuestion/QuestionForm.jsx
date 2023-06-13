@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './QuestionForm.css';
 
-const QuestionForm = () => {
+const QuestionForm = (props) => {
 
 /*
     const [userInput, setUserInput] = useState({
@@ -41,6 +41,11 @@ const submitHandler = (event) => {
         wrong3: enteredWrong3,
     };
     console.log(questionData);
+
+    // This SENDS data to Parent (NewQuestion)
+    // This is how you communicate UP
+    
+    props.onSaveQuestionData(questionData);
 
     // There is two-way binding between the form
     // input and these variables.
